@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-guessing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="title"> Word-guessing
+            <div class="wg">
+            <div class="wg_item">
+            </div>
+            <div class="wg_item">
+            </div>
+            <div class="wg_item">
+            </div>
+            <div class="wg_item">
+            </div>
+            </div>
+        </h1>
+        </div>
+    <div id="start_container" style="display: block;">
+        <p>How this game works: </p>
+        <p>A random word will be given and it's scrambled all the letters.</p>
+        <p>Then, try to figure out what the word is!</p>
+        <button id="start_button">Start</button>
+        
+    </div>
+    <div id="game_container" style="display: none;">
+        <p>Scrambled Word: <span id="scrambledw"></span></p>
+        <input type="text" id="guess_input" placeholder="Your guess">
+        <button id="guess_button">Guess</button>
+        <div id="hint_container" style="display: block;">
+            <button id="hint_button">Hint</button>
+        </div>
+        <div id="hint_result_container" style="display: none;">
+            <p>Here is the hint, the word starts with: <span id="h_word"></span></p>
+            <p>Remaining letters: <span id="remain_letter"></span></p>
+        </div> 
+        <div id = "stat_container" style="display: none;">
+            <p>--------------</p>
+            <p>Actual Words: <span id="cor_guess"></span></p>
+            <p>Your Guesses: <span id="user_guess"></span></p>
+            <p>Your Accurary: <span id="cor_guess_rate"></span>%</p>
+            <button id="reset_button">Reset History</button>
+        </div>
+    </div>
+    <div id="result_container" style="display: none;">
+        <div id="cor_result_container" style="display: none;">
+            <p>Congratulations! That was spot on!</p>
+        </div>  
+        <div id="incor_result_container" style="display: none;">
+            <p>Not quite correct, better luck next time!</p>
+        </div>  
+        <p>Correct Word: <span id="cor_word"></span></p>
+        <p>Your Guess: <span id="userguess_word"></span></p>
+        <p>Scrambled Word: <span id="scrambledw2"></span></p>
+        <button id="re_button">Play Again</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
